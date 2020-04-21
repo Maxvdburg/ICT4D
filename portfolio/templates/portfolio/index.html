@@ -1,0 +1,20 @@
+<h2> Overview of projects </h2>
+{% if latest_project_list %}
+    <ul>
+    {% for project in latest_project_list %}
+        <li><a href="/portfolio/{{ project.id }}/">{{ project.Course }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No projects are available.</p>
+{% endif %}
+<h2> Overview of exams </h2>
+{% if latest_exam_list %}
+    <ul>
+    {% for exam in latest_exam_list %}
+        <li><a href="/portfolio/{{ exam.id }}/">{{ exam.Course }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No exams are available.</p>
+{% endif %}
